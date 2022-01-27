@@ -8,6 +8,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  /* overflow-x: hidden; */
 }
 
 header {
@@ -54,8 +55,20 @@ nav {
 .menu h2,
 .menu-content a,
 .more-on h2,
-.scroll-wrapper h2 {
+.scroll-wrapper h2,
+.main-layout .grid-layout h2 {
   font-size: 1.15em;
+}
+
+.secondary-nav :last-child a,
+.menu-content .more-on a,
+.scroll-wrapper h3 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.scroll-wrapper p {
+  font-size: 0.75em;
 }
 
 .menu .arrow {
@@ -74,6 +87,7 @@ nav {
   left: 0;
   transform: translateY(-150%);
   transition: transform ease 0.2s;
+  z-index: 99;
 }
 
 .menu-content a {
@@ -87,7 +101,7 @@ nav {
   gap: 1.75em;
 }
 
-.scroll-wrapper{
+.scroll-wrapper {
   width: 100%;
 }
 
@@ -100,23 +114,52 @@ nav {
   height: 100px;
 }
 
-
-.secondary-nav :last-child a,
-.menu-content .more-on a,
-.scroll-wrapper h3 {
-  font-weight: normal;
-  font-size: 1em;
+.main-layout {
+  display: grid;
+  border: 2px solid indigo;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
 }
 
-.scroll-wrapper p {
-  font-size: 0.75em;
+.grid-layout {
+  padding: 2em;
+  height: 50vh;
 }
 
-
-.main-layout{
-  min-height: 90vh;
+.grid-layout a {
+  color: #fff;
 }
 
+.main-layout .grid-layout:nth-of-type(1) {
+  background-color: salmon;
+  grid-column: 1 / -1;
+}
+
+.main-layout .grid-layout:nth-of-type(2) {
+  background-color: sandybrown;
+  grid-column: 1 / -1;
+  margin-top: 1em;
+  position: relative;
+  left: 3em;
+}
+
+.main-layout .grid-layout:nth-of-type(3) {
+  background-color: seagreen;
+  grid-column: 1 / -1;
+  margin-top: -5em;
+  position: relative;
+  right: 2em;
+  padding: 2em 2em 2em 5em;
+}
+
+.main-layout .grid-layout p {
+  text-decoration: underline;
+}
+
+.latest {
+  height: 100vh;
+}
 /* After Click */
 .clicked {
   background-color: #00f;
@@ -134,5 +177,3 @@ nav {
 .transform-clear {
   transform: translateY(0);
 }
-
-
