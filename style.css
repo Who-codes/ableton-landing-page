@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 0.5em 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+li {
+  list-style: none;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  gap: 1em;
+}
+
+nav {
+  height: 10vh;
+}
+
+.logo-wrapper {
+  gap: 2em;
+  height: 10vh;
+}
+
+.logo {
+  width: 50%;
+}
+
+.logo svg {
+  width: 100%;
+  height: 4em;
+}
+
+.menu {
+  gap: 0.25em;
+}
+
+.menu h2,
+.menu-content a,
+.more-on h2,
+.scroll-wrapper h2 {
+  font-size: 1.15em;
+}
+
+.menu .arrow {
+  width: 1em;
+  height: 0.5em;
+  margin-top: 0.2em;
+  transform: rotate(180deg);
+}
+
+.menu-content {
+  width: 100%;
+  min-height: 90vh;
+  position: absolute;
+  padding: 0.5em 1em 1em;
+  top: 12vh;
+  left: 0;
+  transform: translateY(-150%);
+  transition: transform ease 0.2s;
+}
+
+.menu-content a {
+  opacity: 0;
+}
+
+.nav-list {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1.75em;
+}
+
+.scroll-wrapper{
+  width: 100%;
+}
+
+.slideable-wrapper {
+  overflow: scroll hidden;
+}
+
+.scroll-wrapper .slideable-wrapper div {
+  width: 200px;
+  height: 100px;
+}
+
+
+.secondary-nav :last-child a,
+.menu-content .more-on a,
+.scroll-wrapper h3 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.scroll-wrapper p {
+  font-size: 0.75em;
+}
+
+
+.main-layout{
+  min-height: 90vh;
+}
+
+/* After Click */
+.clicked {
+  background-color: #00f;
+  color: #fff;
+}
+
+.svg-color path {
+  fill: #fff;
+}
+
+.menu .arrow-up {
+  transform: rotate(0);
+}
+
+.transform-clear {
+  transform: translateY(0);
+}
+
+
