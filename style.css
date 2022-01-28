@@ -8,7 +8,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 header {
@@ -118,46 +118,52 @@ nav {
   display: grid;
   border: 2px solid indigo;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 1em;
+  grid-template-rows: repeat(auto-fit, 1fr);
 }
 
 .grid-layout {
   padding: 2em;
-  height: 50vh;
+  height: 18em;
+  cursor: pointer;
 }
 
-.grid-layout a {
-  color: #fff;
-}
 
 .main-layout .grid-layout:nth-of-type(1) {
   background-color: salmon;
+  height: 20em;
   grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+.main-layout .grid-layout:nth-of-type(1) a{
+  color: #00FFFF;
 }
 
 .main-layout .grid-layout:nth-of-type(2) {
   background-color: sandybrown;
   grid-column: 1 / -1;
-  margin-top: 1em;
-  position: relative;
-  left: 3em;
+  margin: 2em -4em 0 4em;
+}
+
+.main-layout .grid-layout:nth-of-type(2) a{
+  color: #7615E2;
 }
 
 .main-layout .grid-layout:nth-of-type(3) {
   background-color: seagreen;
   grid-column: 1 / -1;
-  margin-top: -5em;
-  position: relative;
-  right: 2em;
-  padding: 2em 2em 2em 5em;
+  margin: -2em 2em 0 -2em;
+  padding: 2em 2em 2em 6em;
+}
+
+.main-layout .grid-layout:nth-of-type(3) a{
+  color: #4200FF;
 }
 
 .main-layout .grid-layout p {
   text-decoration: underline;
 }
 
-.latest {
+.latest-wrapper {
   height: 100vh;
 }
 /* After Click */
