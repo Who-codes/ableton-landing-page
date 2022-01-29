@@ -5,7 +5,7 @@ const navBar = () => {
   const logo = document.querySelector(".logo");
   const menuContent = document.querySelector(".menu-content");
   const links = document.querySelectorAll("a");
-  const moreFrom = document.querySelectorAll('.more-from');
+  const moreFrom = document.querySelectorAll(".more-from");
 
   menu.addEventListener("click", () => {
     header.classList.toggle("clicked");
@@ -38,7 +38,7 @@ const navBar = () => {
       }
     });
 
-    moreFrom.forEach(div => div.classList.toggle('clicked'))
+    moreFrom.forEach((div) => div.classList.toggle("clicked"));
   });
 };
 
