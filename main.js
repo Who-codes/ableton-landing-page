@@ -26,8 +26,6 @@ const navBar = () => {
         parentEle.classList[0] === "more-on" ||
         parentEle.classList[0] === "more-from"
       ) {
-        link.style.color = "#fff";
-
         if (link.style.transition && link.style.opacity) {
           link.style.transition = "";
           link.style.opacity = 0;
@@ -36,14 +34,30 @@ const navBar = () => {
           link.style.opacity = 1;
         }
       }
+      link.style.opacity = 1;
     });
 
     moreFrom.forEach((div) => div.classList.toggle("clicked"));
   });
 };
 
+const bigNav = () => {
+  const largeNav = document.querySelector(".large-nav");
+  const moreBtn = document.querySelector(".more-nav");
+  const plus = document.querySelector(".plus");
+  const minus = document.querySelector(".minus");
+
+  moreBtn.addEventListener("click", () => {
+    largeNav.classList.toggle("hide");
+
+    plus.classList.toggle("hide");
+    minus.classList.toggle("hide");
+  });
+};
+
 const main = () => {
   navBar();
+  bigNav();
 };
 
 main();
